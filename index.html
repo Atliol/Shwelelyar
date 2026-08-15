@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="light" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Shwe lel Yar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Source+Sans+3:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#abf2cb",
+                        "primary-container": "#005236",
+                        "on-surface-variant": "#404943",
+                        "secondary-container": "#6cf8bb",
+                        "secondary": "#006c4a",
+                        "forest-deep": "#002113",
+                        "surface-bright": "#f8f9fb",
+                        "on-tertiary-fixed": "#311300",
+                        "inverse-primary": "#90d5b0",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "earth-dark": "#2d3133",
+                        "surface-container-highest": "#e1e3e5",
+                        "secondary-fixed-dim": "#4edea3",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-container": "#ff9e58",
+                        "sage-soft": "#d8e2ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#005236",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#7fc4a0",
+                        "outline-variant": "#bfc9c1",
+                        "on-secondary-container": "#00714d",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#002113",
+                        "tertiary": "#512500",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-high": "#e6e8ea",
+                        "terracotta-warm": "#ffb786",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#733700",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "surface-dim": "#d8dadc",
+                        "inverse-surface": "#2e3133",
+                        "outline": "#707972",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed": "#002114",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#003924",
+                        "primary-fixed-dim": "#90d5b0",
+                        "surface-variant": "#e1e3e5",
+                        "surface-tint": "#256a4c",
+                        "surface-container": "#eceef0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "800px",
+                        "gutter": "16px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["\"Source Sans 3\""],
+                        "label-caps": ["\"Source Sans 3\""],
+                        "body-md": ["\"Source Sans 3\""],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-sm": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-sm": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface-container-lowest text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-variant flex items-center justify-between px-margin-mobile md:px-margin-desktop h-20 max-w-7xl mx-auto left-0 right-0">
+        <div class="flex items-center gap-3"><img src="./photo_2026-08-08_21-13-13.jpg" alt="AgriSmart Logo"
+                class="h-10 w-auto object-contain">
+            <span class="font-headline-md text-headline-md font-bold text-primary-container tracking-tight">Shwe Lel
+                Yar</span>
+        </div>
+        <button
+    onclick="window.location.href='https://example.com/your-app.apk'"
+    class="bg-primary-container text-on-primary font-body-lg font-semibold px-6 py-3 rounded-full active:scale-95 duration-150 hover:bg-primary transition-colors shadow-sm">
+    Get App
+</button>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section
+            class="px-margin-mobile md:px-margin-desktop py-20 md:py-32 max-w-container-max mx-auto text-center flex flex-col items-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./uuyuy.png'); background-size: cover; background-position: center center;">
+
+            <h1 class="font-display-lg text-display-lg leading-tight mb-8 text-on-primary">
+                Shwe Lel Yar
+            </h1>
+            <p class="font-body-lg text-body-lg max-w-xl mx-auto mb-12 text-on-primary">
+                internet မရှိသည့်တိုင်အောင် လိုအပ်သည့်အချက်လက်များကို နေရာမရွေးအချိန်မရွေးအသုံးပြုနိင်ဖို့
+            </p>
+            <button onclick="window.open('https://www.tiktok.com/@your_username/video/1234567890', '_blank')"
+                class="bg-primary-container text-on-primary font-body-lg font-bold px-10 py-5 rounded-full active:scale-95 transition-all hover:bg-primary w-full sm:w-auto shadow-md">
+                အသုံးပြုနည်းလမ်းညွန်
+            </button>
+            <div class="mt-12 flex flex-col items-center gap-3 text-on-surface-variant font-body-md">
+
+
+            </div>
+            </div>
+        </section>
+        <!-- Core Journey / 3 Steps -->
+        <section class="bg-surface-container py-24 md:py-32"
+            style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLuAuTaAOI_ZNMdOaoR7JIavOYa4s5I7liw0DvP2pJK8POSGLFi7VuSfc9Fxcf8z_mVIx-Sp4bzO6XkCcQRn1_y7GYGurs0ER0nec4wvr4xLosEtiC-EzDzTLrh3xrZM7S6ZfzFoz1Lpk2MD1vyQE2msgc5RO4rZaWkmdZPrbGcN1iMjYYLAOM0eEyUm2ASq9JAJBSgtVydD7k4_91lR69PEUBqb3iKWGNqzjDutoQFsNO1eplsmk2B7AIJE&quot;); background-size: cover; background-attachment: fixed; background-blend-mode: overlay;">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <h2
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
+                    Offline & Online</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-20 max-w-xl mx-auto">Offline and Online
+                    နှစ်မျိုးစလုံးအသုံးပြုနိင်သည့် Smart Farm Assistant app</p>
+                <div class="flex flex-col gap-24 relative">
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-24 h-24 bg-surface-container-lowest rounded-full flex items-center justify-center mb-8 shadow-sm border border-outline-variant/30 text-primary-container">
+                            <span class="material-symbols-outlined text-[48px]">download</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-primary">1. Download &amp; Setup</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md"> Get App ကိုနိပ်၍ Download
+                            ပြုလုပ်ပါ
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-24 h-24 bg-surface-container-lowest rounded-full flex items-center justify-center mb-8 shadow-sm border border-outline-variant/30 text-primary-container">
+                            <span class="material-symbols-outlined text-[48px]">center_focus_strong</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-primary">2. Scan &amp; Ai Chatbot</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">အပင်ရဲ့
+                            ရောဂါပိုးမွားများနှင့်သိလိုသောစိုက်ပျိုးရေးအကြောင်းများကို မေးမြန်နိင်ခြင်း
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-24 h-24 bg-surface-container-lowest rounded-full flex items-center justify-center mb-8 shadow-sm border border-outline-variant/30 text-primary-container">
+                            <span class="material-symbols-outlined text-[48px]">trending_up</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4 text-primary">3. Apply &amp; Grow</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                            စိုက်ပျိုးရေးနည်းပညာနှင့်မွေးမြုရေးနည်းပညာများကိုလေ့လာနိင်ခြင်း</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features List -->
+        <section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+            <h2
+                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
+                Everything You Need</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-20 max-w-xl mx-auto">တောင်သူဦးကြီးများအတွက်
+                မရှိမဖြစ်လိုအပ်သော application</p>
+            <div class="flex flex-col gap-16">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-6 text-primary-container">
+                        <span class="material-symbols-outlined text-[64px] font-light">menu_book</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Complete Crop Guides</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        ဆေးဝါးများနှင့်စိုက်ပျိုးမွေးမြုနည်းပညာများကိုအသေးစိတ်ဖတ်ရှု့လေ့လာနိင်ခြင်း</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-6 text-primary-container">
+                        <span class="material-symbols-outlined text-[64px] font-light">bug_report</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Instant Disease Detection</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        အပင်များတွင်ဖြစ်လေ့ရှိသောရောဂါများကိုအသေးစိတ်ဖတ်ရှု့လေ့လာနိင်ခြင်း</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-6 text-primary-container">
+                        <span class="material-symbols-outlined text-[64px] font-light">partly_cloudy_day</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Local Weather &amp; Markets</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        တစ်နေ့တာရာသီဉတုနှင့်နောက်၃ရက်စာခန့်မှန်းချက်များ၊ ရန်ကုန် မန္တလေး
+                        ရဲ့ကုန်ဈေးနှုန်းများကိုသိရှိနိင်ခြင်း</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-6 text-primary-container">
+                        <span class="material-symbols-outlined text-[64px] font-light">forum</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Expert Advisory</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">တောင်သူအချင်းချင်း အရောင်းအဝယ်
+                        ပြုလုပ် ဆက်သွယ်နိင်ခြင်း</p>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section
+            class="bg-primary-container text-on-primary py-24 md:py-32 px-margin-mobile md:px-margin-desktop text-center">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="font-display-lg text-display-lg mb-8">Ready for a better harvest?</h2>
+                <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-12 max-w-xl mx-auto">
+                    စိုက်ပျိုးသီးနှံအထွက်တိုးဖို့ Shwe Lel Yar App ကို download ပြုလုပ်လိုက်ပါ</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <button onclick="window.location.href='https://example.com/your-app.apk'"
+                        class="bg-on-primary text-primary-container font-body-lg font-bold px-10 py-5 rounded-full flex items-center justify-center gap-3 active:scale-95 transition-transform hover:bg-surface-container-lowest shadow-lg">
+                        <span class="material-symbols-outlined">android</span>
+                        Download
+                    </button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
