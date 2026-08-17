@@ -12,9 +12,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Source+Sans+3:wght@400;700&amp;display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -131,7 +128,8 @@
             <span class="font-headline-md text-headline-md font-bold text-primary-container tracking-tight">Shwe Lel
                 Yar</span>
         </div>
-        <button onclick="window.location.href='https://example.com/your-app.apk'"
+        <!-- ပြင်ဆင်ထားသော Get App Button -->
+        <button onclick="downloadApp()"
             class="bg-primary-container text-on-primary font-body-lg font-semibold px-6 py-3 rounded-full active:scale-95 duration-150 hover:bg-primary transition-colors shadow-sm">
             Get App
         </button>
@@ -153,9 +151,6 @@
                 အသုံးပြုနည်းလမ်းညွန်
             </button>
             <div class="mt-12 flex flex-col items-center gap-3 text-on-surface-variant font-body-md">
-
-
-            </div>
             </div>
         </section>
         <!-- Core Journey / 3 Steps -->
@@ -208,7 +203,6 @@
             <p class="font-body-lg text-body-lg text-on-surface-variant mb-20 max-w-xl mx-auto">တောင်သူဦးကြီးများအတွက်
                 မရှိမဖြစ်လိုအပ်သော application</p>
             <div class="flex flex-col gap-16">
-                <!-- Feature 1 -->
                 <div class="flex flex-col items-center">
                     <div class="mb-6 text-primary-container">
                         <span class="material-symbols-outlined text-[64px] font-light">menu_book</span>
@@ -217,7 +211,6 @@
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
                         ဆေးဝါးများနှင့်စိုက်ပျိုးမွေးမြုနည်းပညာများကိုအသေးစိတ်ဖတ်ရှု့လေ့လာနိင်ခြင်း</p>
                 </div>
-                <!-- Feature 2 -->
                 <div class="flex flex-col items-center">
                     <div class="mb-6 text-primary-container">
                         <span class="material-symbols-outlined text-[64px] font-light">bug_report</span>
@@ -226,7 +219,6 @@
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
                         အပင်များတွင်ဖြစ်လေ့ရှိသောရောဂါများကိုအသေးစိတ်ဖတ်ရှု့လေ့လာနိင်ခြင်း</p>
                 </div>
-                <!-- Feature 3 -->
                 <div class="flex flex-col items-center">
                     <div class="mb-6 text-primary-container">
                         <span class="material-symbols-outlined text-[64px] font-light">partly_cloudy_day</span>
@@ -236,7 +228,6 @@
                         တစ်နေ့တာရာသီဉတုနှင့်နောက်၃ရက်စာခန့်မှန်းချက်များ၊ ရန်ကုန် မန္တလေး
                         ရဲ့ကုန်ဈေးနှုန်းများကိုသိရှိနိင်ခြင်း</p>
                 </div>
-                <!-- Feature 4 -->
                 <div class="flex flex-col items-center">
                     <div class="mb-6 text-primary-container">
                         <span class="material-symbols-outlined text-[64px] font-light">forum</span>
@@ -255,17 +246,29 @@
                 <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-12 max-w-xl mx-auto">
                     စိုက်ပျိုးသီးနှံအထွက်တိုးဖို့ Shwe Lel Yar App ကို download ပြုလုပ်လိုက်ပါ</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <button onclick="window.location.href='https://example.com/your-app.apk'"
+                    <!-- ပြင်ဆင်ထားသော Download Button -->
+                    <button onclick="downloadApp()"
                         class="bg-on-primary text-primary-container font-body-lg font-bold px-10 py-5 rounded-full flex items-center justify-center gap-3 active:scale-95 transition-transform hover:bg-surface-container-lowest shadow-lg">
                         <span class="material-symbols-outlined">android</span>
                         Download
                     </button>
-
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Download Confirmation Script -->
+    <script>
+        function downloadApp() {
+            // Confirm Box ဖြင့် မေးခွန်းထုတ်ခြင်း
+            const confirmDownload = confirm("App ကို ဒေါင်းလုဒ်ဆွဲမှာ သေချာပါသလား?");
+            
+            // Confirm (OK) ကို နှိပ်ပါက ဒေါင်းလုဒ်စတင်မည်
+            if (confirmDownload) {
+                window.location.href = 'https://github.com/Atliol/shwelelyarapp/releases/download/v1.0.0/app-release.apk';
+            }
+        }
+    </script>
 </body>
 
 </html>
