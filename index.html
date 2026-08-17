@@ -122,14 +122,14 @@
     class="bg-surface-container-lowest text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- TopAppBar -->
     <header
-        class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-variant flex items-center justify-between px-margin-mobile md:px-margin-desktop h-20 max-w-7xl mx-auto left-0 right-0">
+        class="fixed top-0 w-full z-40 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-variant flex items-center justify-between px-margin-mobile md:px-margin-desktop h-20 max-w-7xl mx-auto left-0 right-0">
         <div class="flex items-center gap-3"><img src="./1786772562147.png" alt="AgriSmart Logo"
                 class="h-10 w-auto object-contain">
             <span class="font-headline-md text-headline-md font-bold text-primary-container tracking-tight">Shwe Lel
                 Yar</span>
         </div>
-        <!-- ပြင်ဆင်ထားသော Get App Button -->
-        <button onclick="downloadApp()"
+        <!-- Get App Button -->
+        <button onclick="openModal()"
             class="bg-primary-container text-on-primary font-body-lg font-semibold px-6 py-3 rounded-full active:scale-95 duration-150 hover:bg-primary transition-colors shadow-sm">
             Get App
         </button>
@@ -246,8 +246,8 @@
                 <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-12 max-w-xl mx-auto">
                     စိုက်ပျိုးသီးနှံအထွက်တိုးဖို့ Shwe Lel Yar App ကို download ပြုလုပ်လိုက်ပါ</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <!-- ပြင်ဆင်ထားသော Download Button -->
-                    <button onclick="downloadApp()"
+                    <!-- Download Button -->
+                    <button onclick="openModal()"
                         class="bg-on-primary text-primary-container font-body-lg font-bold px-10 py-5 rounded-full flex items-center justify-center gap-3 active:scale-95 transition-transform hover:bg-surface-container-lowest shadow-lg">
                         <span class="material-symbols-outlined">android</span>
                         Download
@@ -257,17 +257,55 @@
         </section>
     </main>
 
-    <!-- Download Confirmation Script -->
-    <script>
-        function downloadApp() {
-            // Confirm Box ဖြင့် မေးခွန်းထုတ်ခြင်း
-            const confirmDownload = confirm("App ကို ဒေါင်းလုဒ်ဆွဲမှာ သေချာပါသလား?");
+    <!-- Custom Modal UI (Dialog Box) -->
+    <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/50 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 md:p-8 max-w-sm w-[90%] shadow-2xl text-center transform scale-95 transition-all">
+            <!-- Icon -->
+            <div class="w-16 h-16 bg-primary-container/10 text-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="material-symbols-outlined text-[36px]">download</span>
+            </div>
             
-            // Confirm (OK) ကို နှိပ်ပါက ဒေါင်းလုဒ်စတင်မည်
-            if (confirmDownload) {
-                window.location.href = 'https://github.com/Atliol/shwelelyarapp/releases/download/v1.0.0/app-release.apk';
-            }
+            <!-- Title & Message -->
+            <h3 class="font-headline-md text-headline-md font-bold text-primary mb-2">Confirm Download</h3>
+            <p class="font-body-md text-on-surface-variant mb-6">App ကို ဒေါင်းလုဒ်ဆွဲမှာ သေချာပါသလား?</p>
+            
+            <!-- Buttons -->
+            <div class="flex items-center justify-center gap-3">
+                <button onclick="closeModal()" 
+                    class="w-1/2 px-5 py-3 rounded-full border border-outline-variant text-on-surface-variant font-semibold hover:bg-surface-container-high active:scale-95 transition-all">
+                    Cancel
+                </button>
+                <button onclick="confirmDownload()" 
+                    class="w-1/2 px-5 py-3 rounded-full bg-primary-container text-on-primary font-semibold hover:bg-primary active:scale-95 transition-all shadow-md">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Control Script -->
+    <script>
+        const modal = document.getElementById('downloadModal');
+
+        function openModal() {
+            modal.classList.remove('hidden');
         }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        function confirmDownload() {
+            closeModal();
+            window.location.href = 'https://github.com/Atliol/shwelelyarapp/releases/download/v1.0.0/app-release.apk';
+        }
+
+        // Overlay နေရာလွတ်ကို နှိပ်ရင်လည်း Modal ပိတ်သွားမည်
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 
