@@ -257,7 +257,6 @@
         </section>
     </main>
 
-    <!-- Custom Modal UI (Dialog Box) -->
     <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/50 backdrop-blur-sm transition-opacity duration-300">
         <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 md:p-8 max-w-sm w-[90%] shadow-2xl text-center transform scale-95 transition-all">
             <!-- Icon -->
@@ -299,7 +298,6 @@
             closeModal();
             window.location.href = 'https://github.com/Atliol/shwelelyarapp/releases/download/v1.0.0/app-release.apk';
         }
-
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 closeModal();
